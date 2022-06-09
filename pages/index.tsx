@@ -11,7 +11,7 @@ import Link from "next/link";
 interface Props {
   posts: Post[];
 }
-const Home: NextPage<Props> = ({ posts }) => {
+const Home: NextPage = ({ posts }: any) => {
   return (
     <div>
       <Head>
