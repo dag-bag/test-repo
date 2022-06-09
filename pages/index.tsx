@@ -20,7 +20,7 @@ const Home: NextPage = ({ posts }: any) => {
       </Head>
       <Header />
       <Main />
-      <div className="max-w-7xl m-auto mt-4  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:py-6 p-4 md:gap-3 lg:gap-6">
+      <div className="max-w-7xl gap-3 m-auto mt-4  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:py-6 p-4 md:gap-3 lg:gap-6">
         {posts.map((post: Post) => {
           return (
             <Link key={post._id} href={`/post/${post.slug.current}`}>
