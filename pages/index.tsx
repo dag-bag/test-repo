@@ -26,7 +26,7 @@ const Home: NextPage = ({ posts }: any) => {
             <Link key={post._id} href={`/post/${post.slug.current}`}>
               <div className="group cursor-pointer border rounded-lg overflow-hidden">
                 <img
-                  className="h-50 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                  className="h-50 max-h-52 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
                   src={urlFor(post.mainImage).url()!}
                 />
                 <div className="flex justify-between items-center p-4 gap-3 md:gap-6 ">
