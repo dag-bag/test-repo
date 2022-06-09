@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-
+import { FC } from "react";
 import Main from "../components/Main";
 import Head from "next/head";
 import Image from "next/image";
@@ -9,9 +9,9 @@ import { Post } from "../typings";
 import Link from "next/link";
 
 interface Props {
-  posts: [Post];
+  posts: Post[];
 }
-const Home: NextPage = ({ posts }: Props) => {
+const Home: NextPage<Props> = ({ posts }) => {
   return (
     <div>
       <Head>
@@ -21,7 +21,7 @@ const Home: NextPage = ({ posts }: Props) => {
       <Header />
       <Main />
       <div className="max-w-7xl m-auto mt-4  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:py-6 p-4 md:gap-3 lg:gap-6">
-        {posts.map((post) => {
+        {posts.map((post: Post) => {
           return (
             <Link key={post._id} href={`/post/${post.slug.current}`}>
               <div className="group cursor-pointer border rounded-lg overflow-hidden">

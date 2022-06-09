@@ -93,9 +93,9 @@ export default function Slug({ post }: Props) {
             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
             serializers={{
-              h1: (props) => <h1 className="text-2xl mb-3" {...props} />,
+              h1: (props: any) => <h1 className="text-2xl mb-3" {...props} />,
 
-              li: ({ children }) => (
+              li: ({ children }: any) => (
                 <li className="special-list-item">{children}</li>
               ),
             }}
@@ -207,7 +207,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
   const query = `*[_type == 'post' && slug.current == $slug][0]{
     _createdAt,
     _id,
