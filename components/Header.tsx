@@ -24,7 +24,7 @@ export default function Header() {
         </div>
       </div>
       <div className="flex space-x-5 text-green-600 justify-center items-center">
-        <h3 className="cursor-pointer hover:bg-green-700 hover:text-white rounded-full px-4 py-1 transition-colors duration-200 ease-out">
+        <h3 className="cursor-pointer hover:bg-green-700 hover:text-white rounded-full md:px-4 md:py-1 transition-colors duration-200 ease-out">
           Sign In
         </h3>
         <h3 className=" border-2 border-green-600 rounded-full px-4 py-1 cursor-pointer hover:bg-green-700 hover:text-white transition-colors duration-200 ease-out">
