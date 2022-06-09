@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+
+nextjs/node_modules
+nextjs/
+
 # next.js
 /.next/
 /out/
